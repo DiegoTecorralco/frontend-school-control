@@ -1,8 +1,7 @@
-
-export const Table = () => {
+export const TableClassroom = () => {
   return (
     <>
-    <table className="table-primary table-strped">
+        <table className="table-primary table-strped">
         <thead>
             <th>Matricula</th>
             <th>Nombre</th>

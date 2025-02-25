@@ -1,6 +1,10 @@
-import { Form } from "./components/form"
+import { Classroom } from "./components/classroom"
+import { Form } from "./components/Form"
 import { Navbar } from "./components/Navbar"
 import { Table } from "./components/Table"
+import { TableClassroom } from "./components/tableClassroom"
+import { TableTeacher } from "./components/TableTeacher"
+import { Teacher } from "./components/teacher"
 
 function App() {
 
@@ -12,13 +16,29 @@ function App() {
       </div>
         <Navbar/>
       <div className="row">
-        <div className="col-lg 5">
+        <div className="col-12">
           {/*aqui va la llamada al cpmponente para el formulario*/ }
           <Form/>
         </div>
-        <div className="col-lg 7">
+        <div className="col-12">
           {/*aqui va la llamada ak componente para la tabla*/}
           <Table/>
+        </div>
+        <div className="col-12">
+          {/*aqui va la llamada ak componente para la tabla*/}
+          <Classroom/>
+        </div>
+        <div className="col-12">
+          {/*aqui va la llamada ak componente para la tabla*/}
+          <TableClassroom/>
+        </div>
+        <div className="col-12">
+          {/*aqui va la llamada ak componente para la tabla*/}
+          <Teacher/>
+        </div>
+        <div className="col-12">
+          {/*aqui va la llamada ak componente para la tabla*/}
+          <TableTeacher/>
         </div>
       </div>
     </div>
