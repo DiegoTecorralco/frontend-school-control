@@ -1,5 +1,19 @@
-
+import { useEffect, useState } from "react";
+import{getAllStudents} from '../services/StudentService';
 export const Table = () => {
+    const [students,setStudents]= useState([]);
+
+    useEffect(()=>{
+    getAllStudents()
+    .then((data)=>{
+        console.log("Datos recibidos de estudiantes",data);
+        setStudents(data);
+    })
+    .catch((error)=>{
+        console.log("error al obtener los datos de estudiantes");
+    });
+    },[]);
+
   return (
     <>
     <table className="table-primary table-strped">

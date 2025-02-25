@@ -1,10 +1,10 @@
-import { Classroom } from "./components/classroom"
+import { Classroom } from "./components/Classroom"
 import { Form } from "./components/Form"
 import { Navbar } from "./components/Navbar"
 import { Table } from "./components/Table"
-import { TableClassroom } from "./components/tableClassroom"
+import { TableClassroom } from "./components/TableClassroom"
 import { TableTeacher } from "./components/TableTeacher"
-import { Teacher } from "./components/teacher"
+import { Teacher } from "./components/Teacher"
 
 function App() {
 
