@@ -42,6 +42,7 @@ export const Table = () => {
                 <tbody>
                     {students.map((student) => (
                         <tr key={student.student_id}>
+                            <td>{student.student_id}</td>
                             <td>{student.name}</td>
                             <td>{student.lastname}</td>
                             <td>{student.grade}</td>
