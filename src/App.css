@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+th {
+  text-align: -webkit-match-parent; /* Para navegadores que soportan -webkit */
+  text-align: match-parent; /* Para Safari 15.4+ y otros navegadores compatibles */
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +44,8 @@
 
 .read-the-docs {
   color: #888;
+}
+body {
+  -webkit-text-size-adjust: 100%; /* Para navegadores que soportan -webkit */
+  text-size-adjust: 100%; /* Para Chrome, Firefox, Edge y otros navegadores compatibles */
 }
