@@ -28,7 +28,7 @@ export const TableClassroom = () => {
       <>
           <table className="table-primary table-strped">
           <thead>
-              <th>Numero Edificio</th>
+              <th>Numero</th>
               <th>Edificio</th>
               <th>Carrera</th>
               <th>Tipo</th>
