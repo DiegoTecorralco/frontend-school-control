@@ -13,7 +13,7 @@ export const getOneTeacher = async (id: string): Promise<any> => {
 }
 
 export const insertTeacher = async (teacher: any): Promise<any> => {
-    const response = await axios.post(`${api_url}/insert`, teacher);
+    const response = await axios.post(`${api_url}/insert`, teacher);  // Envia el objeto 'teacher'
     return response.data;
 }
 

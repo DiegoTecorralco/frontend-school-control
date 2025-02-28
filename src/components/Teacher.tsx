@@ -30,6 +30,7 @@ export const Teacher = () => {
         try {
             const response = await insertTeacher(teacher); // Llamar a la función insertTeacher de Axios
             console.log('Teacher added:', response);
+            alert('Estudiante registrado con éxito');
             // Puedes agregar un mensaje de éxito o redirigir a otra página aquí
         } catch (error) {
             console.error('Error al agregar el maestro:', error);
