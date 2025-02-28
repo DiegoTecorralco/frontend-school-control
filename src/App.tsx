@@ -1,49 +1,51 @@
-import { Classroom } from "./components/Classroom";
-import { Form } from "./components/Form";
-import { Navbar } from "./components/Navbar";
-import { Table } from "./components/Table";
-import { TableClassroom } from "./components/TableClassroom";
-import { TableTeacher } from "./components/TableTeacher";
-import { Teacher } from "./components/Teacher";
+// src/App.tsx
+import React, { useState } from 'react';
+import { Classroom } from './components/Classroom';
+import { TableClassroom } from './components/TableClassroom';
+import { Teacher } from './components/Teacher';
+import { TableTeacher } from './components/TableTeacher';
+import { Form } from './components/Form';
+import { Table } from './components/Table';
+import { Navbar } from './components/Navbar';
 
 function App() {
+  const [activeComponent, setActiveComponent] = useState<string>("");
 
-    return (
-        <>
-            <div className="container">
-                <div className="row mb-3">
-                    {/* Aquí va la llamada al componente de la Navbar */}
-                    <Navbar />
-                </div>
-                <div className="row">
-                    <div className="col-12">
-                        {/* Aquí va la llamada al componente para el formulario */}
-                        <Form />
-                    </div>
-                    <div className="col-12">
-                        {/* Aquí va la llamada al componente para la tabla */}
-                        <Table />
-                    </div>
-                    <div className="col-12">
-                        {/* Aquí va la llamada al componente para la tabla */}
-                        <Classroom />
-                    </div>
-                    <div className="col-12">
-                        {/* Aquí va la llamada al componente para la tabla */}
-                        <TableClassroom />
-                    </div>
-                    <div className="col-12">
-                        {/* Aquí va la llamada al componente para la tabla */}
-                        <Teacher />
-                    </div>
-                    <div className="col-12">
-                        {/* Aquí va la llamada al componente para la tabla */}
-                        <TableTeacher />
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+  const handleNavigation = (component: string) => {
+    setActiveComponent(component);
+  };
+
+  return (
+    <>
+      <div className="container">
+        <div className="row mb-3">
+          <Navbar handleNavigation={handleNavigation} />
+        </div>
+        <div className="row">
+          <div className="col-12">
+            {activeComponent === "classroom" && (
+              <>
+                <Classroom />
+                <TableClassroom />
+              </>
+            )}
+            {activeComponent === "teacher" && (
+              <>
+                <Teacher />
+                <TableTeacher />
+              </>
+            )}
+            {activeComponent === "student" && (
+              <>
+                <Form />
+                <Table />
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default App;
